@@ -2,91 +2,32 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>Group Alarm アプリ</title>
+  <title>Group Alarm & EarthquakeForecastMonitor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-    }
-    header {
-      text-align: center;
-      background: #000;
-    }
-    header img {
-      max-height: 200px;
-      width: auto;
-      height: auto;
-      margin: 0 auto;
-      display: block;
-    }
-    main {
-      padding: 2em;
-      max-width: 900px;
-      margin: auto;
-    }
-    .icon {
-      text-align: center;
-      margin-top: 1.5em;
-    }
-    .icon img {
-      width: 120px;
-      height: 120px;
-      border-radius: 20%;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
-      background: white;
-    }
-    h1 {
-      color: #222;
-      font-size: 1.8em;
-      text-align: center;
-      margin-top: 0.5em;
-    }
-    .button {
-      display: block;
-      text-align: center;
-      background: #34a853;
-      color: white;
-      padding: 0.8em 1.5em;
-      margin: 1em auto 2em;
-      width: fit-content;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      margin-bottom: 2em;
-    }
-    h2 {
-      font-size: 1.2em;
-      margin-top: 1.5em;
-      border-left: 5px solid #34a853;
-      padding-left: 0.5em;
-      color: #333;
-    }
-    ul {
-      padding-left: 1.2em;
-    }
-    .screenshots {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    .screenshots img {
-      width: 200px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease;
-    }
-    .screenshots img:hover {
-      transform: scale(1.05);
-    }
-    footer {
-      text-align: center;
-      color: #888;
-      margin: 3em 0 1em;
+    body { font-family: sans-serif; margin: 0; background: #f9f9f9; }
+    header { text-align: center; background: #000; }
+    header img { max-height: 200px; width: auto; display: block; margin: 0 auto; }
+    main { padding: 2em; max-width: 900px; margin: auto; }
+    .icon { text-align: center; margin-top: 1.5em; }
+    .icon img { width: 120px; height: 120px; border-radius: 20%; box-shadow: 0 0 8px rgba(0,0,0,0.2); background: white; }
+    h1 { color: #222; font-size: 1.8em; text-align: center; margin-top: 0.5em; }
+    h2 { font-size: 1.4em; margin-top: 1.5em; border-left: 5px solid #34a853; padding-left: 0.5em; color: #333; }
+    h3 { font-size: 1.2em; margin-top: 1.2em; color: #333; }
+    p, ul { color: #444; line-height: 1.6; }
+    ul { padding-left: 1.2em; }
+    .button { display: block; text-align: center; background: #34a853; color: white; padding: 0.8em 1.5em; margin: 1em auto 2em; width: fit-content; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    .screenshots { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 1em; }
+    .screenshots img { width: 200px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.2); transition: transform 0.2s ease; background: white; }
+    .screenshots img:hover { transform: scale(1.05); }
+    footer { text-align: center; color: #888; margin: 3em 0 1em; }
+    .note { background: #fffbe6; border-left: 6px solid #f4c542; padding: 1em; margin-top: 2em; box-shadow: 0 0 8px rgba(0,0,0,0.1); border-radius: 6px; }
+    /* 区切り線を太く目立たせる */
+    hr {
+      border: none;
+      height: 4px;
+      background-color: #34a853;
+      margin: 3em 0;
     }
   </style>
 </head>
@@ -97,20 +38,18 @@
 </header>
 
 <main>
+  <!-- Group Alarm セクション -->
   <div class="icon">
     <img src="icon_groupalarm.png" alt="Group Alarm アイコン">
   </div>
-
   <h1>グループアラーム：目覚まし時計・アラーム・運勢占い</h1>
-
   <p>
     テレワーク・出社・休日・外出…<br>
-    どんなライフスタイルにも柔軟に対応できるアラームアプリです<br>
+    どんなライフスタイルにも柔軟に対応できるアラームアプリです。<br>
     シフト勤務のように日ごとにスケジュールが変わる方にも最適！<br>
-    グループ単位で複数のアラームを一括でONOFFもできます<br>
-    また、その日の運勢占いを、かわいいねこアイコンで表示(Ver2より)  
+    グループ単位で複数のアラームを一括でON/OFFできます。<br>
+    また、その日の運勢占いを、かわいいねこアイコンで表示(Ver2より)。
   </p>
-
   <a class="button" href="https://play.google.com/store/apps/details?id=com.spro.groupalarm" target="_blank">
     Google Play でダウンロード
   </a>
@@ -122,15 +61,13 @@
       <li>「テレワーク」「出社」「シフト勤務」「休日」など、複数のスケジュールをグループで登録・切り替え可能</li>
     </ul>
   </section>
-
   <section>
     <h2>■ 急なスケジュール変更もスムーズ対応！</h2>
     <ul>
-      <li>「出社」から「テレワーク」、「日勤」から「夜勤」への切り替えも曜日設定をタップするだけ</li>
+      <li>「出社」から「テレワーク」、「日勤」から「夜勤」への切り替えも、曜日設定をタップするだけ</li>
       <li>突然の予定変更にも、あわてない毎日へ</li>
     </ul>
   </section>
-
   <section>
     <h2>■ その他の便利機能</h2>
     <ul>
@@ -141,42 +78,15 @@
       <li>メロディは、スマホ本体の設定→音設定→アラーム音→音を選択、で変更可能</li>
     </ul>
   </section>
-
   <section>
-    <h2>■占い機能（Ver2より追加）</h2>
+    <h2>■ 占い機能（Ver2より追加）</h2>
     <ul>
       <li>一覧画面右上の3点マークをタップし、誕生日を設定</li>
       <li>アラーム停止画面で、その日の運勢をねこアイコンで表示</li>
     </ul>
   </section>
 
-
-  <section>
-    <h2>■ こんな人におすすめ</h2>
-    <ul>
-      <li>テレワークと出社を日によって切り替える人</li>
-      <li>シフト勤務で毎日違う生活リズムを管理したい人</li>
-      <li>平日と休日で異なる1日を過ごす人</li>
-      <li>毎日のルーティンをアラームでしっかりサポートしたい人</li>
-      <li>その日の運勢を占いたい人</li>
-    </ul>
-  </section>
-
-<section style="background: #fffbe6; border-left: 6px solid #f4c542; padding: 1em; margin-top: 2em; box-shadow: 0 0 8px rgba(0,0,0,0.1); border-radius: 6px;">
-  <h2 style="margin-top: 0; color: #d18b00;">★ レビュー記事掲載のお知らせ</h2>
-  <p style="font-size: 1.1em; font-weight: bold;">
-    アプリブ様にレビュー記事を掲載していただきました！
-  </p>
-  <p>
-    <a href="https://app-liv.jp/5353708/" target="_blank" style="display: inline-block; background: #34a853; color: white; padding: 0.6em 1.2em; border-radius: 4px; text-decoration: none; font-weight: bold;">
-      ▶ 記事を読む（AppLivで公開中）
-    </a>
-  </p>
-</section>
-
-  <p>使い方はとてもシンプル。画面は見やすく、操作も直感的、かつ柔軟。<br>
-  あなたの毎日にリズムと余裕を生み出す、頼れるアラームアプリです。</p>
-
+  <!-- Group Alarm スクリーンショット -->
   <div class="screenshots">
     <img src="Screenshot_一覧.png" alt="一覧画面">
     <img src="Screenshot_テレワーク.png" alt="テレワーク画面">
@@ -187,6 +97,61 @@
     <img src="Screenshot_誕生日.png" alt="誕生日画面">
     <img src="Screenshot_停止.png" alt="停止画面">
   </div>
+
+  <!-- レビュー記事掲載のお知らせ -->
+  <section class="note">
+    <h2 style="margin-top:0; color:#d18b00;">★ レビュー記事掲載のお知らせ</h2>
+    <p style="font-size:1.1em; font-weight:bold;">
+      アプリブ様にレビュー記事を掲載していただきました！
+    </p>
+    <p>
+      <a href="https://app-liv.jp/5353708/" target="_blank" class="button">
+        ▶ 記事を読む（AppLivで公開中）
+      </a>
+    </p>
+  </section>
+
+  <!-- 太く目立つ区切り線 -->
+  <hr>
+
+  <!-- EarthquakeForecastMonitor セクション -->
+  <section>
+    <div class="icon">
+      <img src="ic_EQmonitor.png" alt="EarthquakeForecastMonitor アイコン">
+    </div>
+    <h1>地震予知モニター</h1>
+    <p>
+      発生乱数の偏りから地震の前兆などの異常を検知するアプリ。10秒毎の乱数ビットの比率をグラフ化。
+    </p>
+    <p><strong>【詳細説明】</strong><br>
+      地震予知モニターは、1998年にプリンストン大学で始まった<br>
+      「地球意識プロジェクト（Global Consciousness Project：GCP）」※の実験原理を参考に、<br>
+      Android端末のハードウェア乱数から得られる0/1ビット列に統計的偏りが生じるかを観測するアプリです。<br>
+      10秒毎に“1”の出現割合を集計・可視化し、極端に多かったり、少なかったりした場合、異常状態と考えられます。<br>
+      <small>※GCPは世界各地に設置したハードウェア乱数生成器（RNG）で得たデータと、大規模イベント時の乱数偏差を解析する国際共同研究です。<br>
+      <a href="https://www.global-mind.org/" target="_blank">https://www.global-mind.org/</a><br>
+      米国同時多発テロや東日本大震災の時も乱数の偏りが出たそうです。</small>
+    </p>
+    <h3>■ 主な機能</h3>
+    <ul>
+      <li>ハードウェア乱数取得：SecureRandomによる0/1ビット列を10秒毎に50ビット取得</li>
+      <li>10秒毎の“1”出現割合を自動計算・更新</li>
+      <li>リアルタイムグラフ表示</li>
+      <li>アプリを閉じても、バックグラウンドで乱数を取得</li>
+    </ul>
+    <h3>■ 使い方ガイド</h3>
+    <ul>
+      <li>アプリを起動し「START」をタップ</li>
+      <li>バックグラウンドで乱数取得＆集計を継続</li>
+      <li>「グラフ表示」をタップで、リアルタイムグラフを確認</li>
+    </ul>
+    <h3>■ ご注意</h3>
+    <p>本アプリはあくまで乱数の比率を計算するものです。地震予知を保証するものではありません。</p>
+    <div class="screenshots">
+      <img src="トップ.png" alt="EarthquakeForecastMonitor トップ画面">
+      <img src="グラフ.png" alt="EarthquakeForecastMonitor グラフ画面">
+    </div>
+  </section>
 </main>
 
 <footer>
